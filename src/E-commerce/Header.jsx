@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { cartCount } from "./Main";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 function Header() {
   const { cart, setCart } = useContext(cartCount);
@@ -18,22 +18,32 @@ function Header() {
   }
   return (
     <>
-     <header>
-      <h1><Link to="/">React Routing</Link></h1>
-      <ul>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/blog">Blog</Link></li>
+      <header>
+        <h2>
+          <Link to="/">React Routing</Link>
+        </h2>
+        <ul className="ul-list">
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/blog">Blog</Link>
+          </li>
 
-        <li><Link to="/products">Products</Link></li>
+          <li>
+            <Link to="/products">Products</Link>
+          </li>
 
-        <li><Link to="/services">Services</Link></li>
+          <li>
+            <Link to="/services">Services</Link>
+          </li>
 
-        <li><Link to="/contact">Contact</Link></li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
+        </ul>
+      </header>
 
-
-      </ul>
-     </header>
-     
       <div className="wrapper">
         <nav>
           <a href="#" onClick={handleSubmit}>

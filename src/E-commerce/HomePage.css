@@ -122,6 +122,71 @@ nav a {
   justify-content: right;
   position: relative;
 }
-.show-head p{
+.show-head p {
   cursor: pointer;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 3rem;
+  background-color: rgba(128, 128, 128, 0.646);
+  align-items: center;
+  /* color: black; */
+}
+.ul-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.ul-list li {
+  list-style: none;
+  font-weight: bold;
+}
+.ul-list li a {
+  color: black;
+}
+.ul-list li a:hover {
+  color: red;
+}
+.about-sec {
+  text-align: center;
+  width: 60%;
+  margin: 2rem auto;
+}
+.product-sec {
+  text-align: center;
+  width: 60%;
+  margin: 2rem auto;
+}
+.blog-sec {
+  text-align: center;
+  width: 60%;
+  margin: 2rem auto;
+}
+.contact-sec {
+  text-align: center;
+  width: 60%;
+  margin: 2rem auto;
+}
+.service-sec {
+  text-align: center;
+  width: 60%;
+  margin: 2rem auto;
+}
+.single-page {
+  height: 250px;
+  width: 190px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.548);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  margin: 2rem auto;
+  gap: 0.5rem;
+  background-color: antiquewhite;
+}
+.single-page img {
+  height: 200px;
+  width: 190px;
 }

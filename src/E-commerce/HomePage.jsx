@@ -21,7 +21,7 @@ function HomePage() {
             return (
               <div key={index}>
                 <Link to={`/singleproduct/${item.id}`}>
-                  <Product key={index} productDetail={item} />;
+                  <Product key={index} productDetail={item} />
                 </Link>
               </div>
             );

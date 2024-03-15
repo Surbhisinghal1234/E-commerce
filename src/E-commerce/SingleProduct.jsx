@@ -15,11 +15,13 @@ function SingleProduct() {
     fetchData();
   }, []);
   console.log(data);
-  
-  return <div>{data?.id}</div>; 
 
-  //   <div>SingleProduct</div>;
+  return (
+    <div className="single-page">
+      <img src={data?.thumbnail} alt="" />
+      <p>{data?.id}</p>
+    </div>
+  );
 }
 
 export default SingleProduct;
-
