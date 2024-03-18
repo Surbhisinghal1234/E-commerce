@@ -5,10 +5,17 @@ function About() {
   return (
     <div className="about-sec">
       <h1>Lorem, ipsum.</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis animi est architecto quam molestiae beatae quod expedita veritatis iure velit!</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis
+        animi est architecto quam molestiae beatae quod expedita veritatis iure
+        velit!
+      </p>
       <li>
         {" "}
         <Link to={"aboutpre"}>AboutPre</Link>
+      </li>
+      <li>
+        <Link to={"aboutpost"}>AboutPost</Link>
       </li>
       <Outlet />
     </div>

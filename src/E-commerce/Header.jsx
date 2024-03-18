@@ -5,10 +5,16 @@ import { Link } from "react-router-dom";
 function Header() {
   const { cart, setCart } = useContext(cartCount);
   const [showCartData, setShowCartData] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  
 
   function handleSubmit(e) {
     e.preventDefault();
     setShowCartData(!showCartData);
+  }
+
+  function handleMenuToggle() {
+    setShowMenu(!showMenu);
   }
   function removeCount(e, index) {
     e.preventDefault();
@@ -42,12 +48,17 @@ function Header() {
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
+        <p>
+          <a href="" onClick={handleMenuToggle}>
+            &#8801;
+          </a>
+        </p>
       </header>
 
       <div className="wrapper">
         <nav>
           <a href="#" onClick={handleSubmit}>
-            <i className="fa-solid fa-cart-shopping"></i>{" "}
+            <i className="fa-solid fa-cart-shopping"></i>
             <span>{cart.length}</span>
           </a>
         </nav>

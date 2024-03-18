@@ -11,6 +11,8 @@ import Services from "./Services";
 import Contact from "./Contact";
 import AboutPre from "./AboutPre";
 import SingleProduct from "./SingleProduct";
+import AboutPost from "./AboutPost";
+import Footer from "./Footer";
 // import CartData from "./CartData"
 export const cartCount = createContext();
 
@@ -26,18 +28,25 @@ function Main() {
         <BrowserRouter>
           <Header />
 
+         
           <Routes>
             <Route path="/" element={<HomePage />}></Route>
             <Route path="/about" element={<About />}>
               <Route path="aboutpre" element={<AboutPre />} />
+              <Route path="aboutPost" element={<AboutPost />} />
             </Route>
             <Route path="/blog" element={<Blog />}></Route>
             <Route path="/products" element={<Products />}></Route>
             <Route path="/services" element={<Services />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
-            <Route path="/singleproduct/:id" element = {<SingleProduct/>}></Route>
+            <Route
+              path="/singleproduct/:id"
+              element={<SingleProduct />}
+            ></Route>
           </Routes>
+          <Footer />
         </BrowserRouter>
+        
       </cartCount.Provider>
     </>
   );
