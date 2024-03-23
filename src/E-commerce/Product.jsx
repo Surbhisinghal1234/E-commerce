@@ -1,34 +1,44 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { cartCount } from "./Main";
 
 function Product({ productDetail }) {
+  // console.log(key);
   const { cart, setCart } = useContext(cartCount);
-  //   console.log(cart, setCart)
+  const [addedToCart, setAddedToCart] = useState(false);
+
+  //   const productInCart = cart.some(function (item) {
+  //     return item.id === product.id;
+  //   });
+  //   if (!productInCart) {
+  //     setCart([...cart, product]);
+  //     setAddedToCart(true);
+  //   }
+  // }
   function addCount(e, product) {
     e.preventDefault();
-    setCart([...cart, product]);
+
+    const cartItemIds = cart.map((item) => item.id);
+
+    if (!cartItemIds.includes(product.id)) {
+      setCart([...cart, product]);
+      setAddedToCart(true);
+    }
   }
 
-  // function removeCount(e, remove) {
-  //   e.preventDefault();
-
-  //   const removeFromCart = [...cart];
-  //   removeFromCart.splice(remove, 1);
-  //   setCart(removeFromCart);
-  // }
   return (
     <>
       <div className="product">
         <img src={productDetail.thumbnail} alt="" />
-        <p>{productDetail.id}</p>
 
+        <p>{productDetail.id}</p>
         <h4>{productDetail.title}</h4>
-        <a href="" onClick={(e) => addCount(e, productDetail)}>
-          Add to Cart
+        <a
+          href=""
+          onClick={(e) => addCount(e, productDetail)}
+          disabled={addedToCart}
+        >
+          {addedToCart ? "Added" : "Add to Cart"}
         </a>
-        {/* <a href="" onClick={(e) => removeCount(e, productDetail)}>
-          Remove From Cart
-        </a> */}
       </div>
     </>
   );

@@ -5,23 +5,26 @@ import { Link } from "react-router-dom";
 function Header() {
   const { cart, setCart } = useContext(cartCount);
   const [showCartData, setShowCartData] = useState(false);
-  const [showMenu, setShowMenu] = useState(false);
-  
+  // const [showMenu, setShowMenu] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
     setShowCartData(!showCartData);
   }
 
-  function handleMenuToggle() {
-    setShowMenu(!showMenu);
-  }
+  // function handleMenuToggle() {
+  //   setShowMenu(!showMenu);
+  // }
   function removeCount(e, index) {
     e.preventDefault();
     const removeFromCart = [...cart];
     removeFromCart.splice(index, 1);
     setCart(removeFromCart);
+
+    console.log(index)
   }
+
+  console.log(cart)
   return (
     <>
       <header>
@@ -49,9 +52,7 @@ function Header() {
           </li>
         </ul>
         <p>
-          <a href="" onClick={handleMenuToggle}>
-            &#8801;
-          </a>
+          <a href="">&#8801;</a>
         </p>
       </header>
 
@@ -64,15 +65,17 @@ function Header() {
         </nav>
         {showCartData && (
           <div className="show-head">
-            {cart.map((item, index) => (
-              <div key={index} className="show">
+            {cart.map((item,index) => (
+              <div  key ={index}className="show">
                 <img src={item.thumbnail} alt="" />
                 <p>{item.id}</p>
                 <h4>{item.title}</h4>
                 <p onClick={(e) => removeCount(e, index)}>&times;</p>
+                
               </div>
             ))}
           </div>
+          
         )}
       </div>
     </>

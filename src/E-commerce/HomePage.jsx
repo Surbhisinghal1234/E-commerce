@@ -11,8 +11,10 @@ function HomePage() {
       console.log(response.data.products);
 
       setshowData(response.data.products);
+      console.log(response.data.products);
     });
   }, []);
+  // console.log(item.id)
   return (
     <>
       <div className="products">

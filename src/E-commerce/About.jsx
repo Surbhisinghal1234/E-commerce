@@ -4,6 +4,7 @@ import { Link, Outlet } from "react-router-dom";
 function About() {
   return (
     <div className="about-sec">
+         <Outlet />
       <h1>Lorem, ipsum.</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis
@@ -12,12 +13,12 @@ function About() {
       </p>
       <li>
         {" "}
-        <Link to={"aboutpre"}>AboutPre</Link>
+        <Link to={"aboutpre"}>AboutPre </Link>
       </li>
       <li>
-        <Link to={"aboutpost"}>AboutPost</Link>
+        <Link to={"aboutpost"}>AboutPost </Link>
       </li>
-      <Outlet />
+   
     </div>
   );
 }

@@ -11,6 +11,8 @@ import Services from "./Services";
 import Contact from "./Contact";
 import AboutPre from "./AboutPre";
 import SingleProduct from "./SingleProduct";
+import BlogSinglePage from "./BlogSinglePage";
+
 import AboutPost from "./AboutPost";
 import Footer from "./Footer";
 // import CartData from "./CartData"
@@ -28,7 +30,6 @@ function Main() {
         <BrowserRouter>
           <Header />
 
-         
           <Routes>
             <Route path="/" element={<HomePage />}></Route>
             <Route path="/about" element={<About />}>
@@ -39,14 +40,18 @@ function Main() {
             <Route path="/products" element={<Products />}></Route>
             <Route path="/services" element={<Services />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
+
             <Route
-              path="/singleproduct/:id"
+              path="/singleproduct/:ids"
               element={<SingleProduct />}
+            ></Route>
+            <Route
+              path="/blogsinglepage/:id"
+              element={<BlogSinglePage />}
             ></Route>
           </Routes>
           <Footer />
         </BrowserRouter>
-        
       </cartCount.Provider>
     </>
   );

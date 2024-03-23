@@ -198,7 +198,48 @@ header p {
   font-weight: bold;
   font-size: 2rem;
 }
-
+.blog {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 2rem; */
+  justify-content: center;
+}
+.blog-single {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  width: 180px;
+  height: 200px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.589);
+  border-radius: 10px;
+  text-align: center;
+  margin: 2rem;
+  background: linear-gradient(
+    to right,
+    rgba(255, 68, 0, 0.196),
+    rgba(79, 111, 73, 0.498)
+  );
+  padding: 10px;
+  /* gap: 3rem; */
+}
+.blog-single p {
+  color: #000;
+}
+.box-single-page {
+  margin: 2rem auto;
+  width: 230px;
+  height: 270px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.589);
+  border-radius: 10px;
+  text-align: center;
+  /* margin: 2rem; */
+  padding: 15px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 68, 0, 0.196),
+    rgba(0, 0, 0, 0.498)
+  );
+}
 @media screen and (min-width: 300px) and (max-width: 600px) {
   header p {
     display: block;
